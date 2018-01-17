@@ -1,4 +1,4 @@
-package com.hadoopbook;
+package com.hadoopbook.mr;
 
 import java.util.Map.Entry;
 
@@ -11,7 +11,7 @@ import org.apache.hadoop.util.ToolRunner;
  * Hello world!
  *
  */
-public class App extends Configured implements Tool {
+public class ConfigurationPrinter extends Configured implements Tool {
 
     static {
 	Configuration.addDefaultResource("hdfs-default.xml");
@@ -23,7 +23,7 @@ public class App extends Configured implements Tool {
     }
 
     public static void main(String[] args) throws Exception {
-	int exitCode = ToolRunner.run(new App(), args);
+	int exitCode = ToolRunner.run(new ConfigurationPrinter(), args);
 	System.exit(exitCode);
     }
 
